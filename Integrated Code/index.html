@@ -1,0 +1,107 @@
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Angular Material style sheet -->
+    <link rel="stylesheet" href="CSS/angular-min/angular-material.1.1.0.min.css">
+    <link rel="stylesheet" href="CSS/angular-min/ng-table.min.css">
+    <!-- custom style sheet -->
+    <link rel="stylesheet" href="CSS/style.css">
+    <!-- icons min file -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<!-- body of the page starts here -->
+
+<body ng-app="inTmbleApp" layout="column" class="main-body" data-ng-controller="mainCtrl as main" ng-cloak>
+    <!-- Title nav bar is given here -->
+    <md-toolbar class="toolbar-height">
+        <h2 class="md-toolbar-tools title-navBar">
+          <div flex="15">
+            <md-icon  hide-gt-sm  show-sm show-xs flex-offset="5" ng-click="main.toggleNav()">
+              <i class="material-icons icon-style" ng-if="main.navMenuDisplay">menu</i>
+              <i class="material-icons icon-style" ng-if="!main.navMenuDisplay">arrow_back</i>
+            </md-icon>
+            <img hide show-gt-sm flex="80" ng-src="assets/logo.jpg" alt="Trimble logo">
+          </div>
+        <span hide show-gt-xs flex-offset-gt-sm="40" class="title-text">SNM941</span>
+      </h2>
+    </md-toolbar>
+    
+    <div layout="row" flex style="position: relative;">
+        <!-- side nav starts here -->
+        <md-sidenav flex-gt-sm="25" md-disable-backdrop="true" class="md-sidenav-left md-whiteframe-z2 sidenav-box" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
+            <md-list>
+                <md-list-item class="image-list">
+                    <img class="router-image" ng-src="assets/router.jpg" alt="Trimble logo">
+                </md-list-item>
+                <md-list-item>
+                    <md-button class="navbar-text" ui-sref="network_config">
+                        <md-icon><i class="material-icons">cast_connected</i></md-icon>
+                        Network Configuration
+                    </md-button>
+                </md-list-item>
+                <md-list-item>
+                    <md-button class="navbar-text">
+                        <md-icon><i class="material-icons">settings</i></md-icon>
+                        Telematic Configuration
+                    </md-button>
+                </md-list-item>
+                <md-list-item>
+                    <md-button class="navbar-text">
+                        <md-icon><i class="material-icons">settings</i></md-icon>
+                        RTK Rebroadcast
+                    </md-button>
+                </md-list-item>
+                <md-list-item>
+                    <md-button class="navbar-text" ui-sref="diagnostics">
+                        <md-icon><i class="material-icons">favorite</i></md-icon>
+                        Diagnostics
+                    </md-button>
+                </md-list-item>
+                <md-list-item>
+                    <md-button class="navbar-text">
+                        <md-icon><i class="material-icons">settings</i></md-icon>
+                        System Settings
+                    </md-button>
+                </md-list-item>
+            </md-list>
+        </md-sidenav>
+        <div flex>
+            <ui-view></ui-view>
+        </div>
+    </div>
+
+
+
+    <!-- Angular Material requires Angular.js Libraries -->
+    <script src="JS/angular-min/angular.min.js"></script>
+    <script src="JS/angular-min/angular-ui-router.js"></script>
+    <script src="JS/angular-min/angular-animate.1.5.5.min.js"></script>
+    <script src="JS/angular-min/angular-aria.1.5.5.min.js"></script>
+    <script src="JS/angular-min/angular-messages.1.5.5.min.js"></script>
+    <script src="JS/angular-min/ng-table.min.js"></script>
+    <!-- Angular Material Library -->
+    <script src="JS/angular-min/angular-material.1.1.0.min.js"></script>
+    <!-- module file -->
+    <script src="modules/module.js"></script>
+
+    <script src="modules/dashboard/dashboard.module.js"></script>
+    <script src="modules/daignostics/daignostics.module.js"></script>
+    <script src="modules/network-configuration/network-configuration.module.js"></script>
+    
+    <script src="modules/route-config.js"></script>
+    
+    <script src="modules/main.controller.js"></script>
+    
+    <script src='modules/dashboard/app.dashboard.js'></script>
+
+    <script src="modules/daignostics/daignostics.scantool.js"></script>
+
+    <script src="modules/network-configuration/app.network-configuration.js"></script>
+
+    <script src="modules/daignostics/diagnostics.theme.config.js"></script>
+
+
+</body>
+
+</html>

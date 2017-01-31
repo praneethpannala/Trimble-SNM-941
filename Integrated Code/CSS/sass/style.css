@@ -1,0 +1,52 @@
+@import url("nc.style.css");
+.header-bar {
+  background-color: #fabe00;
+  color: #464456; }
+
+.relative {
+  position: relative; }
+
+.profile-menu .profile-title {
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  background-color: rgba(0, 0, 0, 0.5); }
+  .profile-menu .profile-title .title {
+    margin: 5px;
+    color: #fff; }
+
+.dashboard {
+  padding: 20px; }
+  .dashboard .dashboard-title {
+    color: #8d8d97;
+    margin-left: 20px; }
+  .dashboard .dashboard-card {
+    padding-bottom: 10px; }
+    .dashboard .dashboard-card .title {
+      font-size: 16px;
+      font-weight: bold;
+      color: #363545;
+      padding-left: 5px; }
+    .dashboard .dashboard-card .card-content {
+      padding: 0px; }
+      .dashboard .dashboard-card .card-content .card-table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-bottom: 10px; }
+        .dashboard .dashboard-card .card-content .card-table tr td:first-child {
+          font-weight: bold;
+          color: #363545;
+          border-left: none; }
+        .dashboard .dashboard-card .card-content .card-table tr td:last-child {
+          border-right: none; }
+        .dashboard .dashboard-card .card-content .card-table tr td {
+          font-size: 14px;
+          border: 1px solid #f0f0f0;
+          padding: 12px 6px 12px 20px;
+          color: #363545; }
+        .dashboard .dashboard-card .card-content .card-table tr:first-child td {
+          font-weight: bold;
+          border: none;
+          color: #464456; }
+
+/*# sourceMappingURL=style.css.map */

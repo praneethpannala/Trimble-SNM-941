@@ -1,0 +1,27 @@
+<div>
+    <md-card>
+        <md-card-content layout = 'column'>
+            <h5>RTK Rebroadcast</h5>
+            <div layout='row'>
+                <span>Current Profile:</span>
+                <span>unknown</span>
+            </div>
+            <div layout='row'>
+                <span>Current Profile:</span>
+                <span>
+					<md-select >
+						<md-option ng-repeat="state in ['Option 1', 'Option 2', 'Option 3', 'Option 4']" value="{{state}}">
+						{{state}}
+						</md-option>
+					</md-select>
+				</span>
+                <span>
+                	<md-button class="md-raised">APPLY PROFILE</md-button>
+                </span>
+            </div>
+            <md-divider></md-divider>
+            <h5>RTK Rebroadcast</h5>
+
+        </md-card-content>
+    </md-card>
+</div>

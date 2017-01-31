@@ -1,0 +1,52 @@
+<md-dialog class="my-dialog">
+  <form ng-cloak>
+    <md-dialog-content>
+      <div class="md-dialog-content">
+        <h3 style="margin:0px">Add Network</h3>
+        <span class="md-subhead top-padding small-font">Please provide some guidance</span>
+        <div layout-gt-sm="row" class="div-width">
+          <md-input-container class="md-block dialog-input " flex-gt-sm>
+            <input type="text" placeholder="Network Name" class="dropdown-input">
+          </md-input-container>
+            <md-input-container class="md-block dialog-input" flex-gt-sm style="margin-left: 20px">
+              <md-select ng-model="user.state" placeholder="Security" class="dropdown-input">
+                <md-option ng-repeat="state in states" value="{{state.abbrev}}">
+                  {{state.abbrev}}
+                </md-option>
+              </md-select>
+            </md-input-container>
+        </div>
+        <div class="table-overflow-scroll">
+            <table ng-table="addWifi.networkTypeTable" class="table table-striped lefttext table-format">
+                <tr ng-repeat="networkType in $data">
+                    <td data-title="'Choose a Network'">
+                      <span><i class="material-icons iconFont ">wifi</i></span>
+                      <span>{{networkType.networkType}}</span>
+                    </td>
+                    <td data-title="'Security'" style="text-align: right">{{networkType.security}}</td>
+                </tr>
+            </table>
+        </div>
+
+        <md-input-container class="md-block dialog-input password-input">
+          <input type="password" placeholder="Enter Password" class=" dropdown-input ">
+        </md-input-container>
+        <a href="" style = 'color: #0d6aa8;text-decoration:none'>Advanced Options</a>
+
+
+      </div>
+      
+      
+    </md-dialog-content>
+
+    <md-dialog-actions layout="row">
+      <span flex></span>
+      <md-button ng-click="addWifi.cancel()" class="md-raised "><a href="" style = 'color: #0d6aa8'>
+        Cancel</a>
+      </md-button>
+      <md-button ng-click="addWifi.saveNetwork()" class="md-raised md-primary" style = 'background: #0d6aa8'>
+       SAVE NETWORK
+      </md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>

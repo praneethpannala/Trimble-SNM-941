@@ -1,0 +1,164 @@
+ <div flex class="view-detials">
+                <div class="header" flex-offset-gt-sm="5">
+                   <pre><span class="md-title" >Daignostics</span><br><span class="md-subhead">Subheader...</span> </pre>
+                </div>
+                <div>
+                    <md-tabs md-dynamic-height md-border-bottom>
+                        <md-tab layout-padding label="PING" >
+                            <md-card class="md-padding tab-data">
+                                <md-card-content >
+                                    <span layout="row">
+                                        <input flex="50"class="text-input md-padding" type="text" placeholder="Ping!">
+                                        <button flex="30" class="button-features" layout-margin>Ping</button>
+                                    </span>
+                                </md-card-content>
+                            </md-card>
+                        </md-tab>
+                        <md-tab label="NETWORK INTERFACES">
+                               <md-card layout="column" class="md-padding tab-data">       
+                                   <md-card-header class="md-padding">
+                                        <md-card-header-text>
+                                            <span class="md-title">Device Connections</span>
+                                            <span class="md-subhead">Cras porttitor in neque ut aliquam.</span>
+                                        </md-card-header-text>
+                                     </md-card-header>
+                                    <md-card-content layout="column" class="text-bold">
+                                        <div layout="row" class="md-padding">
+                                            <span flex="20">can0</span>
+                                            <div flex>
+                                                Link encap:UNSPEC HWaddr 00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00<br>
+                                                UP RUNNING NOARP MTU:16 Metric:1<br>
+                                                RX packets:1 errors:135 dropped:0 overruns:0 frame:0<br>
+                                                TX packets:0 errors:0 dropped:0 overruns:0 carrier:0<br>
+                                                collisions:0 txqueuelen:10000<br>
+                                                RX bytes:8 (8.0 B) TX bytes:17 (17.0 B)<br>
+                                                Interrupt:12 Base address:0x8000
+                                            </div>
+                                        </div>
+                                        <div layout="row" class="md-padding">
+                                            <span flex="20">can1</span>
+                                            <div flex>
+                                                Link encap:UNSPEC HWaddr 00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00<br>
+                                                UP RUNNING NOARP MTU:16 Metric:1<br>
+                                                RX packets:1 errors:135 dropped:0 overruns:0 frame:0<br>
+                                                TX packets:0 errors:0 dropped:0 overruns:0 carrier:0<br>
+                                                collisions:0 txqueuelen:10000<br>
+                                                RX bytes:8 (8.0 B) TX bytes:17 (17.0 B)<br>
+                                                Interrupt:12 Base address:0x8000
+                                            </div>
+                                        </div>
+                                        <div layout="row" class="md-padding">
+                                            <span flex="20">Ethernet</span>
+                                            <div flex>
+                                                Link encap:UNSPEC HWaddr 00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00<br>
+                                                UP RUNNING NOARP MTU:16 Metric:1<br>
+                                                RX packets:1 errors:135 dropped:0 overruns:0 frame:0<br>
+                                                TX packets:0 errors:0 dropped:0 overruns:0 carrier:0<br>
+                                                collisions:0 txqueuelen:10000<br>
+                                                RX bytes:8 (8.0 B) TX bytes:17 (17.0 B)<br>
+                                                Interrupt:12 Base address:0x8000
+                                            </div>
+                                        </div>
+                                        <div layout="row" class="md-padding">
+                                            <span flex="20">WiFi</span>
+                                            <div flex>
+                                                Link encap:UNSPEC HWaddr 00-00-00-00-00-00-00-00-00-00-00-00-00-00-00-00<br>
+                                                UP RUNNING NOARP MTU:16 Metric:1<br>
+                                                RX packets:1 errors:135 dropped:0 overruns:0 frame:0<br>
+                                                TX packets:0 errors:0 dropped:0 overruns:0 carrier:0<br>
+                                                collisions:0 txqueuelen:10000<br>
+                                                RX bytes:8 (8.0 B) TX bytes:17 (17.0 B)<br>
+                                                Interrupt:12 Base address:0x8000
+                                            </div>
+                                        </div>
+                                    </md-card-content>
+                                   
+                               </md-card>
+                            
+                        </md-tab>
+                        <div layout= "row" data-ng-controller="scanToolCtrl as st">
+                            <md-tab layout = 'column' label="SCAN TOOL" >
+                                <md-card  class="md-padding tab-data">
+                                    <h4>Hardware</h4>
+                                    <div ng-table ="st.componentDetails">
+                                        <table layout="column" ng-if="st.screenResolution === true" class="table-title table table-striped lefttext" >
+                                            <thead>
+                                                <tr layout="row">
+                                                    <th flex-offset="5" flex="30">Title</th>
+                                                    <th>Description</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody layout="column">
+                                                <tr layout="row"ng-repeat="component in $data[0].Hardware">
+                                                    <td flex="5"><md-icon><i class="material-icons" ng-style=" {'color': component.color }">{{component.status}}</i></md-icon></td>
+                                                    <td  flex="30" >{{component.title}}</td>
+                                                    <td flex >{{component.description}}</td>
+                                                </tr> 
+                                            </tbody>                   
+                                        </table>
+                                        <div ng-if="st.screenResolution === false">
+                                            <md-card ng-repeat="component in $data[0].Hardware">
+                                                <md-card-content layout="column">
+                                                    <div layout="row">
+                                                        <span flex="50"><b>Title</b></span>
+                                                        <span flex="50">{{component.title}}</span>
+                                                    </div><br>
+                                                    <div layout="row">
+                                                        <span flex="50"><b>Description:</b></span>
+                                                        <span flex="50">{{component.description}}</span>
+                                                    </div>
+                                                </md-card-content>
+                                            </md-card>
+                                        </div>
+                                    </div>
+                                </md-card>
+                               <md-card  class="md-padding tab-data">
+                                   <h4>Cell</h4>
+                                    <div ng-table ="st.componentDetails">
+                                        <table layout="column" ng-if="st.screenResolution === true" class="table-title table table-striped lefttext" >
+                                            <thead>
+                                                <tr layout="row">
+                                                    <th flex-offset="5" flex="30">Title</th>
+                                                    <th>Description</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody layout="column">
+                                                <tr layout="row"ng-repeat="component in $data[1].Cell">
+                                                    <td flex="5" ><md-icon><i class="material-icons" ng-style=" {'color': component.color }">{{component.status}}</i></md-icon></td>
+                                                    <td flex="30" >{{component.title}}</td>
+                                                    <td flex >{{component.description}}</td>
+                                                </tr> 
+                                            </tbody>                   
+                                        </table>
+                                        <div ng-if="st.screenResolution === false">
+                                            <md-card ng-repeat="component in $data[1].Cell">
+                                                <md-card-content>
+                                                    <div layout="row">
+                                                        <span flex="50"><b>Title</b></span>
+                                                        <span flex="50">{{component.title}}</span>
+                                                    </div><br>
+                                                    <div layout="row">
+                                                        <span flex="50"><b>Description:</b></span>
+                                                        <span flex="50">{{component.description}}</span>
+                                                    </div>
+                                                </md-card-content>
+                                            </md-card>
+                                        </div>
+                                    </div>
+                                </md-card>
+                                <md-card layout = 'row' layout-align="center center" class="md-padding tab-data">
+                                     <h4 flex="15">WiFi</h4>
+                                     <md-progress-linear flex md-mode="determinate" class="md-accent" value="10"></md-progress-linear>
+
+                                </md-card>
+                                <md-card layout = 'row' layout-align="center center" class="md-padding tab-data">
+                                     <h4 flex="15">Back Office</h4>
+                                     <md-progress-linear flex md-mode="determinate" class="md-accent" value=""></md-progress-linear>
+                                     
+                                </md-card>
+                            </md-tab>
+                        </div>
+                    </md-tabs>
+                                   
+                </div>
+            </div>
