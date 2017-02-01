@@ -1,4 +1,4 @@
-<div ng-controller='dashboardCtrl as dc' class = "dashboard">
+<div ng-controller='dashboardCtrl as dc' class = "dashboard content-div">
     <h2 class='dashboard-title'>DashBoard</h2>
     <md-content layout-gt-xs='row' layout-wrap>
         <md-card ng-repeat='card in dc.cardsData' class='dashboard-card' flex-gt-sm='30' flex-sm='45' flex-xs md-theme="default">
@@ -21,7 +21,7 @@
                 </table>
             </md-card-content>
             <md-card-actions ng-if='card.action' layout="row" layout-align="end center">
-                <md-button class="md-raised md-primary">{{card.action}}</md-button>
+                <md-button class="md-raised md-accent">{{card.action}}</md-button>
             </md-card-actions>
         </md-card>
     </md-content>

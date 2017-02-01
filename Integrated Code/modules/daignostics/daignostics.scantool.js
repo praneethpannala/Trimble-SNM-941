@@ -16,7 +16,6 @@
 
             counts: [],
             getData : function($defer,params){
-                console.log("hi")
                  $http.get('modules/daignostics/daignostics-scan-tools.json').then(function(response) {
                  ts.componentData = response.data.scanTools;
                  $defer.resolve(ts.componentData);

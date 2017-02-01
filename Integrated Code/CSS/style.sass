@@ -1,43 +1,47 @@
+@import "telematic.sass"
+
 $main-bg-color: #f3f3f7
 $primary-bg-color: #FFBE00
 $primary-color: rgba(51, 50, 50, 0.87)
+=my-padding-mixin($some-number)
+	padding: $some-number
 
-.toolbar-height
-	min-height: 48px  
+.header-bar
+	background-color: rgba(250,190,0,1)
+	color: #464456
+
 .main-body
 	background-color: $main-bg-color
 
-.toolbar-height
-	height: 30px
-
-.title-navBar
-	background-color: $primary-bg-color
-	@extend .toolbar-height
-
-.title-text
-	color: $primary-color
-	font-size: 16px
-
-
 .sidenav-box
 	box-shadow: 0px 0px 0px 0px
-.navbar-text
-	font-size: 12px
-	width: 100%
-	margin: 0px
-	text-align: left
-	padding-left: 18px
+	.image-list
+		padding: 0px !important
+		margin: 0px !important
+		.router-image
+			width: 100%
+			padding-bottom: 15px
+	.navbar-text
+		font-size: 12px
+		width: 100%
+		margin: 0px
+		text-align: left
+		padding-left: 18px
+		text-transform: none
 
-.navbar-text:focus
-	background-color: $main-bg-color
+	.navbar-text:focus
+		background-color: $main-bg-color
 
-.router-image
-	width: 100%
-	padding-bottom: 15px
+.content-div
+	height: 90%
+	overflow-y: scroll
+	.content-div-title
+		margin: 20px
+		color: #7B7A86
+		.main-title
+			margin-bottom: 5px
+			font-weight: 100
 
-.image-list
-	padding: 0px !important
-	margin: 0px !important
 
 .icon-style
 	font-size: 20px
@@ -45,27 +49,46 @@ $primary-color: rgba(51, 50, 50, 0.87)
 .top-padding
 	padding-top: 0px !important
 
-.table-overflow-scroll
-	overflow-x: auto
-	min-height: 0.01%
-
-table 
+.table-format 
 	border-collapse: collapse
 	width: 100%
 	font-size: 13px
-	tr
-		td
-			padding: 10px
+	th
+		text-align: right
+
+	thead
+		display: none
 	tbody
 		tr:nth-child(odd)
-			background-color: #f2f2f2			
+			background-color: #f2f2f2
+.card-table
+	thead
+		display: table-header-group
+	tr
+		td:last-child
+			text-align: right
 
 .card-padding
 	margin: 20px 20px
 .lefttext
+	th:last-child
+		text-align: right
+		
 	th
 		text-align: left
 		padding: 10px
+
+@media (min-width: 960px) 
+	.table-format 
+		thead
+			display: table-header-group
+		tr
+			td
+				padding: 10px
+			td:last-child
+				text-align: right
+
+
 .iconFont.iconFont
 	font-size: 16px 
 .text-right
@@ -78,13 +101,31 @@ table
 	margin-top: 20px
 .right-padding
 	padding-right: 10px
+.bottom-margin
+	margin-bottom: 0px
 .ng-table-pager 
 	display: none
 .small-font.small-font
 	font-size: 12px
 	color: #7B7A86
+	
+.my-dialog
+	border-radius: 0px
+	.dialog-input
+		height: 20px
+		margin: 15px 0px 18px 0px
+
+	.dropdown-input.dropdown-input
+		border: 1px solid rgba(0, 0, 0, 0.12)
+		font-size: 14px
+
+	.href-text
+		color: #0d6aa8
+	.decoration
+		text-decoration: none
+
+
 .dashboard
-	padding: 20px
 	.dashboard-title
 		color: #8d8d97
 		margin-left: 20px
@@ -114,11 +155,66 @@ table
 						border: 1px solid #f0f0f0
 						padding: 12px 6px 12px 20px
 						color: #363545
+						word-wrap: break-word
 				tr:first-child
 					td
 						font-weight: bold
 						border: none
 						color: #464456
+
+.remove-margin
+	margin: 0px
+
+.rebroadcast
+	.apply-btn
+		border: 1px solid #005f9e
+		border-radius: 3px
+		color: #0043ad
+		font-weight: bold
+		height: 35px
+	.rebroadcast-title
+		color: #8d8d97
+		margin-left: 20px
+	.rebroadcast-card
+		font-size: 14px
+		color: #464456
+		.margin-left
+			margin-left: 10px
+		.gap-above
+			margin: 15px 0px
+		.highlight
+			font-weight: bold
+		.title
+			font-size: 16px
+		.select-list
+			margin: 0px
+			margin-left: 10px
+			border: 2px solid #f3f3f7
+		.sub-block
+			padding: 10px 10px 20px 10px
+			table
+				tr
+					td
+						padding: 3px 10px 3px 0px 
+					td:first-child
+						font-weight: bold
+			.tr-height
+				tr
+					height: 40px
+			.input-field
+				border: 2px solid #f3f3f7
+				padding: 5px
+				height: 35px
+				width: 200px
+				font-size: 18px
+				margin: 20px 20px 0px 0px
+
+
+
+.view-detials
+	+my-padding-mixin(25px)
+	.header
+		color: rgb(170,170,170)
 
 .tab-data
 	margin-top: 15px  
@@ -139,12 +235,24 @@ table
 .text-bold
 	font-weight: bold
 
+.scan-tools-table
+	border-collapse: collapse
+	width: 100%
+	font-size: 13px
+	tbody
+		tr
+			td
+				padding: 10px
+				font-size: 15px
+		tr:nth-child(odd)
+			background-color: #f2f2f2
+
 .table-title.table-title
 	th
 		color: black
 		text-align: left
 		font-size: 15px
+		margin-left: 6%
+		
 
-		div
-			margin-left: 7px
 

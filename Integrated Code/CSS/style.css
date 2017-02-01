@@ -1,39 +1,124 @@
-.toolbar-height, .title-navBar {
-  min-height: 48px; }
+.tele-main-div {
+  margin-top: 0px; }
+  .tele-main-div .tele-text {
+    margin-left: 50px;
+    color: #7B7A86; }
+  .tele-main-div .subheader-text {
+    margin-left: 50px;
+    margin-top: -15px;
+    color: #7B7A86; }
+  .tele-main-div .card-tele-size {
+    height: 180px; }
+    .tele-main-div .card-tele-size .title-tele-text {
+      margin-top: -20px;
+      margin-left: 10px; }
+      .tele-main-div .card-tele-size .title-tele-text .tele-card-text {
+        font-size: 17px;
+        margin-left: -10px; }
+    .tele-main-div .card-tele-size .content-text {
+      margin-top: -30px; }
+      .tele-main-div .card-tele-size .content-text .tele-radio-text1 {
+        font-size: 12px; }
+      .tele-main-div .card-tele-size .content-text .tele-radio-text {
+        font-size: 15px;
+        margin-left: -5px; }
+    .tele-main-div .card-tele-size .firstcard-button {
+      margin-top: 37px; }
+      .tele-main-div .card-tele-size .firstcard-button .button-size {
+        background-color: #0d6aa8;
+        color: white; }
+  .tele-main-div .card-tele-size1 {
+    height: 180px; }
+    .tele-main-div .card-tele-size1 .title-tele-text {
+      margin-top: -20px;
+      margin-left: 10px; }
+      .tele-main-div .card-tele-size1 .title-tele-text .tele-card-text {
+        font-size: 17px;
+        margin-left: -10px; }
+    .tele-main-div .card-tele-size1 .content-text {
+      margin-top: -30px; }
+      .tele-main-div .card-tele-size1 .content-text .tele-radio-text2 {
+        font-size: 12px;
+        margin-left: -5px; }
+    .tele-main-div .card-tele-size1 .secondcard-button {
+      margin-top: 25px; }
+      .tele-main-div .card-tele-size1 .secondcard-button .button-size {
+        background-color: #0d6aa8;
+        color: white; }
+  .tele-main-div .card-tele-size2 {
+    height: 230px; }
+    .tele-main-div .card-tele-size2 .title-tele-text {
+      margin-top: -20px;
+      margin-left: 10px; }
+      .tele-main-div .card-tele-size2 .title-tele-text .tele-card-text {
+        font-size: 17px;
+        margin-left: -10px; }
+      .tele-main-div .card-tele-size2 .title-tele-text .title-tele-text-p3 {
+        margin-top: -20px;
+        font-size: 10px;
+        margin-left: -10px; }
+    .tele-main-div .card-tele-size2 .tele-card3-radio-text {
+      font-size: 12px;
+      margin-top: -10px; }
+    .tele-main-div .card-tele-size2 .button-class {
+      margin-top: -20px; }
+      .tele-main-div .card-tele-size2 .button-class .button-size {
+        background-color: #0d6aa8;
+        color: white; }
+  .tele-main-div .card-tele-size3 {
+    height: 250px; }
+    .tele-main-div .card-tele-size3 .tele-card-text {
+      font-size: 17px;
+      margin-left: -10px; }
+    .tele-main-div .card-tele-size3 .title-tele-text-p4 {
+      margin-top: -20px;
+      font-size: 12px;
+      margin-left: -10px; }
+    .tele-main-div .card-tele-size3 .content-text4 {
+      margin-top: -15px; }
+      .tele-main-div .card-tele-size3 .content-text4 .text-box {
+        border: 1px solid #7B7A86;
+        height: 30px;
+        width: 250px;
+        margin-top: 15px; }
+    .tele-main-div .card-tele-size3 .button-size {
+      background-color: #0d6aa8;
+      color: white; }
+
+.header-bar {
+  background-color: #fabe00;
+  color: #464456; }
 
 .main-body {
   background-color: #f3f3f7; }
 
-.toolbar-height, .title-navBar {
-  height: 30px; }
-
-.title-navBar {
-  background-color: #FFBE00; }
-
-.title-text {
-  color: rgba(51, 50, 50, 0.87);
-  font-size: 16px; }
-
 .sidenav-box {
   box-shadow: 0px 0px 0px 0px; }
+  .sidenav-box .image-list {
+    padding: 0px !important;
+    margin: 0px !important; }
+    .sidenav-box .image-list .router-image {
+      width: 100%;
+      padding-bottom: 15px; }
+  .sidenav-box .navbar-text {
+    font-size: 12px;
+    width: 100%;
+    margin: 0px;
+    text-align: left;
+    padding-left: 18px;
+    text-transform: none; }
+  .sidenav-box .navbar-text:focus {
+    background-color: #f3f3f7; }
 
-.navbar-text {
-  font-size: 12px;
-  width: 100%;
-  margin: 0px;
-  text-align: left;
-  padding-left: 18px; }
-
-.navbar-text:focus {
-  background-color: #f3f3f7; }
-
-.router-image {
-  width: 100%;
-  padding-bottom: 15px; }
-
-.image-list {
-  padding: 0px !important;
-  margin: 0px !important; }
+.content-div {
+  height: 90%;
+  overflow-y: scroll; }
+  .content-div .content-div-title {
+    margin: 20px;
+    color: #7B7A86; }
+    .content-div .content-div-title .main-title {
+      margin-bottom: 5px;
+      font-weight: 100; }
 
 .icon-style {
   font-size: 20px;
@@ -42,26 +127,38 @@
 .top-padding {
   padding-top: 0px !important; }
 
-.table-overflow-scroll {
-  overflow-x: auto;
-  min-height: 0.01%; }
-
-table {
+.table-format {
   border-collapse: collapse;
   width: 100%;
   font-size: 13px; }
-  table tr td {
-    padding: 10px; }
-  table tbody tr:nth-child(odd) {
+  .table-format th {
+    text-align: right; }
+  .table-format thead {
+    display: none; }
+  .table-format tbody tr:nth-child(odd) {
     background-color: #f2f2f2; }
+
+.card-table thead {
+  display: table-header-group; }
+.card-table tr td:last-child {
+  text-align: right; }
 
 .card-padding {
   margin: 20px 20px; }
 
+.lefttext th:last-child {
+  text-align: right; }
 .lefttext th {
   text-align: left;
   padding: 10px; }
 
+@media (min-width: 960px) {
+  .table-format thead {
+    display: table-header-group; }
+  .table-format tr td {
+    padding: 10px; }
+  .table-format tr td:last-child {
+    text-align: right; } }
 .iconFont.iconFont {
   font-size: 16px; }
 
@@ -80,6 +177,9 @@ table {
 .right-padding {
   padding-right: 10px; }
 
+.bottom-margin {
+  margin-bottom: 0px; }
+
 .ng-table-pager {
   display: none; }
 
@@ -87,39 +187,99 @@ table {
   font-size: 12px;
   color: #7B7A86; }
 
-.dashboard {
-  padding: 20px; }
-  .dashboard .dashboard-title {
-    color: #8d8d97;
-    margin-left: 20px; }
-  .dashboard .dashboard-card {
-    padding-bottom: 10px; }
-    .dashboard .dashboard-card .title {
-      font-size: 16px;
-      font-weight: bold;
-      color: #363545;
-      padding-left: 5px; }
-    .dashboard .dashboard-card .card-content {
-      padding: 0px; }
-      .dashboard .dashboard-card .card-content .card-table {
-        border-collapse: collapse;
-        width: 100%;
-        margin-bottom: 10px; }
-        .dashboard .dashboard-card .card-content .card-table tr td:first-child {
-          font-weight: bold;
-          color: #363545;
-          border-left: none; }
-        .dashboard .dashboard-card .card-content .card-table tr td:last-child {
-          border-right: none; }
-        .dashboard .dashboard-card .card-content .card-table tr td {
-          font-size: 14px;
-          border: 1px solid #f0f0f0;
-          padding: 12px 6px 12px 20px;
-          color: #363545; }
-        .dashboard .dashboard-card .card-content .card-table tr:first-child td {
-          font-weight: bold;
-          border: none;
-          color: #464456; }
+.my-dialog {
+  border-radius: 0px; }
+  .my-dialog .dialog-input {
+    height: 20px;
+    margin: 15px 0px 18px 0px; }
+  .my-dialog .dropdown-input.dropdown-input {
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    font-size: 14px; }
+  .my-dialog .href-text {
+    color: #0d6aa8; }
+  .my-dialog .decoration {
+    text-decoration: none; }
+
+.dashboard .dashboard-title {
+  color: #8d8d97;
+  margin-left: 20px; }
+.dashboard .dashboard-card {
+  padding-bottom: 10px; }
+  .dashboard .dashboard-card .title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #363545;
+    padding-left: 5px; }
+  .dashboard .dashboard-card .card-content {
+    padding: 0px; }
+    .dashboard .dashboard-card .card-content .card-table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-bottom: 10px; }
+      .dashboard .dashboard-card .card-content .card-table tr td:first-child {
+        font-weight: bold;
+        color: #363545;
+        border-left: none; }
+      .dashboard .dashboard-card .card-content .card-table tr td:last-child {
+        border-right: none; }
+      .dashboard .dashboard-card .card-content .card-table tr td {
+        font-size: 14px;
+        border: 1px solid #f0f0f0;
+        padding: 12px 6px 12px 20px;
+        color: #363545;
+        word-wrap: break-word; }
+      .dashboard .dashboard-card .card-content .card-table tr:first-child td {
+        font-weight: bold;
+        border: none;
+        color: #464456; }
+
+.remove-margin {
+  margin: 0px; }
+
+.rebroadcast .apply-btn {
+  border: 1px solid #005f9e;
+  border-radius: 3px;
+  color: #0043ad;
+  font-weight: bold;
+  height: 35px; }
+.rebroadcast .rebroadcast-title {
+  color: #8d8d97;
+  margin-left: 20px; }
+.rebroadcast .rebroadcast-card {
+  font-size: 14px;
+  color: #464456; }
+  .rebroadcast .rebroadcast-card .margin-left {
+    margin-left: 10px; }
+  .rebroadcast .rebroadcast-card .gap-above {
+    margin: 15px 0px; }
+  .rebroadcast .rebroadcast-card .highlight {
+    font-weight: bold; }
+  .rebroadcast .rebroadcast-card .title {
+    font-size: 16px; }
+  .rebroadcast .rebroadcast-card .select-list {
+    margin: 0px;
+    margin-left: 10px;
+    border: 2px solid #f3f3f7; }
+  .rebroadcast .rebroadcast-card .sub-block {
+    padding: 10px 10px 20px 10px; }
+    .rebroadcast .rebroadcast-card .sub-block table tr td {
+      padding: 3px 10px 3px 0px; }
+    .rebroadcast .rebroadcast-card .sub-block table tr td:first-child {
+      font-weight: bold; }
+    .rebroadcast .rebroadcast-card .sub-block .tr-height tr {
+      height: 40px; }
+    .rebroadcast .rebroadcast-card .sub-block .input-field {
+      border: 2px solid #f3f3f7;
+      padding: 5px;
+      height: 35px;
+      width: 200px;
+      font-size: 18px;
+      margin: 20px 20px 0px 0px; }
+
+.view-detials {
+  padding: 25px; }
+  .view-detials .header {
+    color: #aaaaaa; }
 
 .tab-data {
   margin-top: 15px; }
@@ -140,11 +300,20 @@ table {
 .text-bold {
   font-weight: bold; }
 
+.scan-tools-table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 13px; }
+  .scan-tools-table tbody tr td {
+    padding: 10px;
+    font-size: 15px; }
+  .scan-tools-table tbody tr:nth-child(odd) {
+    background-color: #f2f2f2; }
+
 .table-title.table-title th {
   color: black;
   text-align: left;
-  font-size: 15px; }
-  .table-title.table-title th div {
-    margin-left: 7px; }
+  font-size: 15px;
+  margin-left: 6%; }
 
 /*# sourceMappingURL=style.css.map */
